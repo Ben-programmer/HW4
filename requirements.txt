@@ -1,7 +1,8 @@
 # 核心套件
 streamlit>=1.28.0
-insightface>=0.7.3
+insightface==0.7.3
 onnxruntime>=1.16.0
+onnx>=1.15.0
 
 # 影像處理（使用 headless 版本以支援 Streamlit Cloud）
 opencv-python-headless>=4.8.0

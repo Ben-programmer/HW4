@@ -31,9 +31,18 @@ class FaceRecognizer:
     def initialize_model(self):
         """載入 InsightFace 模型"""
         print("🚀 正在載入 InsightFace 模型...")
-        self.app = FaceAnalysis(providers=['CPUExecutionProvider'])
-        self.app.prepare(ctx_id=0, det_size=(640, 640))
-        print("✅ 模型載入完成！")
+        try:
+            # 使用 buffalo_l 模型，並指定允許的模組
+            self.app = FaceAnalysis(
+                name='buffalo_l',
+                providers=['CPUExecutionProvider'],
+                allowed_modules=['detection', 'recognition']
+            )
+            self.app.prepare(ctx_id=-1, det_size=(640, 640))
+            print("✅ 模型載入完成！")
+        except Exception as e:
+            print(f"❌ 模型載入失敗: {str(e)}")
+            raise
         
     def extract_face_features(self, image_path: str) -> Optional[np.ndarray]:
         """

@@ -26,36 +26,58 @@
 - ✅ `QUICK_REFERENCE.md` - 快速參考卡
 
 #### 設定檔案
-- ✅ `.gitignore` - Git 忽略設定
+- ✅ `.gitignore` - Git 忽略設定（已更新）
 - ✅ `.streamlit/config.toml` - Streamlit 設定
 
-#### 資料夾結構
-- ✅ `photos/.gitkeep` - 訓練照片資料夾標記
-- ✅ `test_photos/.gitkeep` - 測試照片資料夾標記
+#### 照片資料 ⭐ 新增
+- ✅ `photos/cookieslu/` - 8 張訓練照片
+- ✅ `photos/helu/` - 8 張訓練照片
+- ✅ `photos/jay/` - 8 張訓練照片
+- ✅ `test_photos/cookieslu/` - 3 張測試照片
+- ✅ `test_photos/helu/` - 3 張測試照片
+- ✅ `test_photos/jay/` - 3 張測試照片
+
+**總照片數**: 33 張（24 訓練 + 9 測試）
+**總大小**: 約 3.5 MB
 
 ### 📊 提交統計
 
 - **分支**: main
-- **提交數**: 2 個
+- **提交數**: 4 個
   1. Initial commit: 周杰倫種族分類 PK 專案
   2. Add GitHub repository link to README
-- **檔案數**: 17 個
+  3. Add deployment documentation
+  4. Add training and test photos (cookieslu, helu, jay) ⭐
+- **檔案數**: 50 個（17 程式碼 + 33 照片）
 - **程式碼行數**: 2000+ 行
+- **總大小**: 約 3.7 MB
 
-### 🔒 隱私保護
+### � 包含的照片資料
+
+**已推送到 GitHub**：
+- ✅ `photos/` 中的所有訓練照片（24 張）
+  - cookieslu: 8 張
+  - helu: 8 張
+  - jay: 8 張
+- ✅ `test_photos/` 中的所有測試照片（9 張）
+  - cookieslu: 3 張
+  - helu: 3 張
+  - jay: 3 張
+
+**總大小**: 約 3.5 MB
+
+### 🔒 未推送的內容
 
 根據 `.gitignore` 設定，以下內容**未**推送到 GitHub：
-- ❌ `photos/` 中的實際照片（僅保留資料夾結構）
-- ❌ `test_photos/` 中的實際照片（僅保留資料夾結構）
-- ❌ `venv/` 虛擬環境
-- ❌ `.DS_Store` 系統檔案
-- ❌ InsightFace 模型快取
-- ❌ Python 快取檔案
+- ❌ `venv/` 虛擬環境（太大且每個人應該自己建立）
+- ❌ `.DS_Store` macOS 系統檔案
+- ❌ `.insightface/` 模型快取（會自動下載）
+- ❌ Python 快取檔案（`__pycache__/` 等）
 
 這確保了：
-1. 照片隱私受到保護
-2. 倉庫大小保持精簡
-3. 其他人可以使用自己的照片資料
+1. 倉庫包含完整的範例資料
+2. 其他人可以直接使用
+3. 不包含不必要的大型檔案
 
 ## 📥 其他人如何使用
 
@@ -67,24 +89,29 @@ git clone https://github.com/Ben-programmer/HW4.git
 cd HW4
 ```
 
-### 2. 準備照片資料
-```bash
-# 建立訓練照片資料夾
-mkdir -p photos/category1 photos/category2 photos/category3
+**注意**：照片資料已包含在倉庫中，可以直接使用！
 
-# 建立測試照片資料夾
-mkdir -p test_photos/category1 test_photos/category2 test_photos/category3
-
-# 放入自己的照片...
-```
-
-### 3. 安裝與執行
+### 2. 直接安裝與執行（使用範例照片）
 ```bash
 # 方法 1: 使用安裝腳本
 ./install.sh
 
 # 方法 2: 一鍵啟動
 ./run.sh
+```
+
+### 3. 使用自己的照片（可選）
+如果想使用自己的照片資料：
+```bash
+# 清空現有照片
+rm -rf photos/* test_photos/*
+
+# 建立自己的分類資料夾
+mkdir -p photos/my_category1 photos/my_category2
+mkdir -p test_photos/my_category1 test_photos/my_category2
+
+# 放入自己的照片...
+# 記得更新 app.py 中的 CATEGORIES_DISPLAY
 ```
 
 ## 🔄 後續更新流程

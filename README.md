@@ -1,6 +1,12 @@
 # 🎤 周杰倫種族分類 PK 大賽
 
+[![GitHub](https://img.shields.io/badge/GitHub-Ben--programmer%2FHW4-blue?logo=github)](https://github.com/Ben-programmer/HW4)
+
 基於蔡炎龍老師的 AI Demo 專案改編，使用 InsightFace 進行人臉辨識，與 AI 一起 PK 誰比較會認人！
+
+## 🔗 專案連結
+
+- **GitHub 倉庫**: https://github.com/Ben-programmer/HW4
 
 ## 📋 專案說明
 

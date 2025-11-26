@@ -1,0 +1,9 @@
+# 測試照片資料夾，結構需與 photos/ 相同
+# 例如：
+# test_photos/
+#   ├── jay_young/        
+#   ├── jay_middle/       
+#   ├── jay_movie/        
+#   └── ...
+
+# 每個子資料夾中放入該分類的測試照片（用於 PK 遊戲）

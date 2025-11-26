@@ -5,7 +5,7 @@ __pycache__/
 *.so
 .Python
 env/
-venv/
+venv/  # 虛擬環境太大，建議排除
 ENV/
 build/
 develop-eggs/
@@ -26,15 +26,15 @@ wheels/
 # Streamlit
 .streamlit/secrets.toml
 
-# InsightFace models
+# InsightFace models (模型太大，不上傳)
 .insightface/
 *.onnx
 
-# 照片資料（根據需求調整）
-photos/*
-test_photos/*
-!photos/.gitkeep
-!test_photos/.gitkeep
+# 照片資料 - 現在包含在倉庫中
+# photos/ 和 test_photos/ 會被推送到 GitHub
+# 但排除 macOS 系統檔案
+photos/.DS_Store
+test_photos/.DS_Store
 
 # IDE
 .vscode/

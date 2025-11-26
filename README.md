@@ -2,6 +2,16 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-Ben--programmer%2FHW4-blue?logo=github)](https://github.com/Ben-programmer/HW4)
 
+## 📖 專案摘要
+
+本專案是一個基於深度學習的互動式人臉辨識遊戲應用程式，靈感來源於蔡炎龍老師的 AI-Demo 專案中的 [【Demo03v】和AI_PK看誰比較會認IVE成員.ipynb](https://github.com/yenlung/AI-Demo/blob/master/%E3%80%90Demo03v%E3%80%91%E5%92%8CAI_PK%E7%9C%8B%E8%AA%B0%E6%AF%94%E8%BC%83%E6%9C%83%E8%AA%8DIVE%E6%88%90%E5%93%A1.ipynb)。我們將原本的 Jupyter Notebook 改編為完整的 Web 應用程式，使用 InsightFace 的 buffalo_l 模型進行高精度人臉特徵提取與辨識，並透過 Streamlit 框架建構直觀友善的使用者介面。
+
+專案的核心概念是「人機對決」——使用者與 AI 系統同時觀看測試照片，競賽誰能更準確地辨識出照片中的人物類別。系統會即時顯示雙方的答案與信心度，讓使用者能直觀地理解 AI 的判斷邏輯。透過這種互動方式，不僅讓人臉辨識技術變得生動有趣，也能幫助使用者了解深度學習模型的實際運作效果與限制。
+
+本專案採用模組化架構設計，包含核心的人臉辨識模組（face_recognition.py）與前端介面模組（app.py），支援自定義訓練資料與測試資料，使用者可以輕鬆擴充到任何人物分類場景。目前預設包含三個類別（Cookies 呂、何呂、周杰倫）的範例資料，展示了系統在多人臉辨識任務中的優異表現。專案已部署至 GitHub 與 Streamlit Cloud，提供完整的文件與快速開始指南，適合作為深度學習入門與實務應用的學習範例。
+
+---
+
 基於蔡炎龍老師的 AI Demo 專案改編，使用 InsightFace 進行人臉辨識，與 AI 一起 PK 誰比較會認人！
 
 ## 🔗 專案連結
